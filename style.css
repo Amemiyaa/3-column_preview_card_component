@@ -2,6 +2,7 @@
 
 /* font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif; */
+
 :root {
 /* ### Primary */
 
@@ -27,20 +28,20 @@ body {
   background-color: var(--very-light-gray);
   font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
-  color: white;
+  color: var(--very-light-gray);
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content:center
+  justify-content: center
 }
 
 /* CARD */
 
 .card {
   display: flex;
-  width: 40rem;
-  height: 21rem;
+  width: 40.25rem;
+  height: 21.5rem;
   text-align: left;
 }
 
@@ -88,7 +89,8 @@ body {
 }
 
 .card .card_sedans img, .card .card_suvs img, .card .card_luxury img {
-  width: 3rem;
+  width: 2.9rem;
+  margin-top: 6rem;
   margin-bottom: 1.5rem;
 }
 
@@ -96,26 +98,55 @@ body {
   font-family: 'Big Shoulders Display', cursive;
   font-size: 1.7rem;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card .card_sedans p, .card .card_suvs p, .card .card_luxury p {
   color: var(--transparent-white);
   font-size: 0.7rem;
-  text-align: justify;
-  margin-bottom: 4rem;
-  line-height: 1.2rem;
+  text-align: left;
+  margin-bottom: 3.5rem;
+  line-height: 1rem;
+  word-spacing: -1px;
 }
 
 .card .card_sedans button, .card .card_suvs button, .card .card_luxury button {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.7rem;
+  min-width: 6.5rem;
+  min-height: 2.25rem;
   padding: 1rem;
+  border: none;
+  border-radius: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
 
+.card .card_sedans button:hover, .card .card_suvs button:hover, .card .card_luxury button:hover {
+  cursor: pointer;
+  color: var(--very-light-gray);
+  border: 0.1rem solid var(--very-light-gray);
+  background-color: transparent;
 }
 
 /* FOOTER */
 .attribution {
    font-size: 11px; text-align: center;
-  }
+}
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERY - MOBILE */
+
+@media (max-width: 500px) {
+  body {
+    max-height: 20rem;
   }
+  .card {
+    flex-direction: column;
+    width: 20rem;
+  }
+}
