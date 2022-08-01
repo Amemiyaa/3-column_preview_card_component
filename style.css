@@ -141,12 +141,44 @@ body {
 
 /* MEDIA QUERY - MOBILE */
 
-@media (max-width: 500px) {
-  body {
-    max-height: 20rem;
-  }
+@media only screen and (max-width: 500px) {
+
   .card {
+    max-width: 13.5rem;
     flex-direction: column;
-    width: 20rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* CARD SEDANS */
+
+  .card .card_sedans {
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+
+  /* CARD LUXURY */
+
+  .card .card_luxury {
+    border-radius: 0 0 0.4rem 0.4rem;
+  }
+
+
+  /* SHARED STYLES CARDS */
+  .card .card_sedans, .card .card_suvs, .card .card_luxury {
+    height: 20rem;
+  }
+
+  .card .card_sedans img, .card .card_suvs img, .card .card_luxury img {
+    margin-top: 1rem;
+  }
+
+  .card .card_sedans p, .card .card_suvs p, .card .card_luxury p {
+    font-size: 0.65rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .card .card_sedans button, .card .card_suvs button, .card .card_luxury button {
+    margin-bottom: 1rem;
   }
 }
