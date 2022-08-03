@@ -143,8 +143,14 @@ body {
 
 @media only screen and (max-width: 500px) {
 
+  body {
+    width: 100%;
+    margin: auto;
+  }
+
   /* CARD */
   .card {
+    display: flex;
     max-width: 58%;
     flex-direction: column;
     align-items: center;
@@ -164,7 +170,9 @@ body {
   }
 
 
-  /* SHARED STYLES CARDS */
+  /* SHARED STYLES CARDS*/
+
+
   .card .card_sedans, .card .card_suvs, .card .card_luxury {
     height: 20rem;
   }
@@ -180,6 +188,19 @@ body {
   }
 
   .card .card_sedans button, .card .card_suvs button, .card .card_luxury button {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* MEDIA QUERY HEIGHT */
+@media only screen and (max-height: 990px) {
+  body {
+    height: 120vh;
+  }
+}
+
+@media only screen and (max-height: 690px) {
+  body {
+    height: 170vh;
   }
 }
